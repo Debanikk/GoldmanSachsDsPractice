@@ -13,9 +13,9 @@ public class StockBuySellOptimized {
     }
 
     /// In the local minima and maxima finding -
-    // we have to keep in mind that always the left side of the comparator
-    // has to be less than or greater than the right side of the comparator
-    // while comparing in situations like i <= i+1 index or i >= i+1 index
+    /// we have to keep in mind that always the left side of the comparator
+    /// has to be less than or greater than the right side of the comparator
+    /// while comparing in situations like i <= i+1 index or i >= i+1 index
 
     static void stockBuySell(int price[], int n)
     {
@@ -72,7 +72,6 @@ public class StockBuySellOptimized {
                                 + "        "
                                 + "Sell on day : " + sol.get(j).sell);
 
-        return;
     }
 }
 

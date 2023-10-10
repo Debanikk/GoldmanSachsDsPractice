@@ -10,7 +10,7 @@ public class MedianTwoSortedArrays {
 
     // TEST method and driver code for finding median
     // Array values would be defined here
-    public static Boolean doTests(){
+    public static Boolean doTests() {
         boolean result = true;
 
         int arr1[] = {1, 12, 15, 26, 38};
@@ -31,7 +31,7 @@ public class MedianTwoSortedArrays {
         return result;
     }
 
-    static int getMedian(int ar1[], int ar2[], int n){
+    static int getMedian(int ar1[], int ar2[], int n) {
         int i = 0;
         int j = 0;
         int count;

@@ -1,5 +1,7 @@
 package com.wildfire.GoldmanSachsDsPractice.ArrayRotationAndOtherSubArrayProblems;
 
+import java.util.HashMap;
+
 // find the length of minimum sub Array exceeding sum.
 // ex: input : array is {1,2,3,4} sum = 6, output:length 2
 public class SubArrayExceedingSum {
@@ -37,6 +39,17 @@ public class SubArrayExceedingSum {
 
     }
 
+    static void printPairOfSum(int[] arr, int sum) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i < arr.length; ++i) {
+            int temp = sum - arr[i];
+            if(map.containsKey(temp)) {
+                System.out.println("The pair is " + i + " and the other is - " + map.get(temp));
+            }
+            map.put(arr[i], i);
+        }
+    }
+
     /**
      * Execution entry point.
      */
@@ -44,6 +57,7 @@ public class SubArrayExceedingSum {
     {
         boolean result = true;
         int[] arr = { 1, 2, 3, 4 };
+        printPairOfSum(arr, 6);
         result = result && subArrayExceedsSum( arr, 6 ) == 2;
         result = result && subArrayExceedsSum( arr, 12 ) == -1;
 
