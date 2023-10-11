@@ -1,9 +1,12 @@
 package com.wildfire.GoldmanSachsDsPractice.StringOperations;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class FirstNonRepeatingCharacterInString {
     public static void main(String[] args) {
+        char resultnew = findFirstRepeatInString("racecars");
+        System.out.println("first repeat is - " + resultnew);
         String[] inputs = {"apple", "racecars", "ababdc", "aabdcce"};
         char[] outputs = {'a', 'e', 'd', 'd' };
 
@@ -30,6 +33,11 @@ public class FirstNonRepeatingCharacterInString {
                 charMap.put(str.charAt(i), Boolean.TRUE);
             }
         }
+        int cnt = 0;
+        for(char c: charMap.keySet()) {
+            System.out.println(c + " at position " + cnt);
+            cnt++;
+        }
 
         //for each rotation check if hashmap value is true
         // then return character from running index in for loop
@@ -39,5 +47,15 @@ public class FirstNonRepeatingCharacterInString {
         }
 
         return '0';
+    }
+
+    static char findFirstRepeatInString(String str) {
+        HashSet<Character> set = new HashSet<>();
+        for(char c: str.toCharArray()) {
+            if(!set.add(c)){
+                return c;
+            }
+        }
+        return ' ';
     }
 }
