@@ -22,7 +22,7 @@ public class ApacheLogCheckIpAddress {
         HashMap<String, Integer> IMap = new HashMap<>();
         int max = 0;
         String resultIp = "";
-        for(String s: lines){
+        for(String s: lines) {
             String ipAddr = s.split("-")[0].trim();
             if(IMap.containsKey(ipAddr)){
                 IMap.put(ipAddr, IMap.get(ipAddr) + 1);

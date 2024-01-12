@@ -1,8 +1,5 @@
 package com.wildfire.GoldmanSachsDsPractice.LinkedListProblems;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
 public class DeleteNodeAtGivenIndex {
     Node head;
 

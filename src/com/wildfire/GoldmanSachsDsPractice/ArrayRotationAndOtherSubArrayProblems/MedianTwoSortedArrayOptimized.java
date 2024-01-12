@@ -2,8 +2,11 @@ package com.wildfire.GoldmanSachsDsPractice.ArrayRotationAndOtherSubArrayProblem
 
 public class MedianTwoSortedArrayOptimized {
     public static void main(String[] args) {
-        int[] arr1 = { 1, 12, 15, 26, 38 };
-        int[] arr2 = { 2, 13, 17, 30, 45 };
+        // The solution does not work for the below input/ Test case. Hence, this is not recommended.
+        int[] arr1 = new int[]{1,2,3,5,6};
+        int[] arr2 = new int[]{4};
+        //int[] arr1 = { 1, 12, 15, 26, 38 };
+        //int[] arr2 = { 2, 13, 17, 30, 45 };
         System.out.println("Median of two sorted array is - " + findMedian(arr1, arr2, 0, 0, arr1.length - 1, arr2.length - 1));
     }
 
