@@ -44,7 +44,7 @@ public class SubArrayExceedingSum {
         for(int i = 0; i < arr.length; ++i) {
             int temp = sum - arr[i];
             if(map.containsKey(temp)) {
-                System.out.println("The pair is " + i + " and the other is - " + map.get(temp));
+                System.out.println("The pair is " + i + " and the other is: " + map.get(temp));
             }
             map.put(arr[i], i);
         }

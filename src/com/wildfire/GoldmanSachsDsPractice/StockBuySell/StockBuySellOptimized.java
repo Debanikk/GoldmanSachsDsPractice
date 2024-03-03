@@ -17,10 +17,10 @@ public class StockBuySellOptimized {
     /// has to be less than or greater than the right side of the comparator
     /// while comparing in situations like i <= i+1 index or i >= i+1 index
 
-    static void stockBuySell(int price[], int n)
+    static void stockBuySell(int price[], int timeSeriesLength)
     {
         // Prices must be given for at least two days
-        if (n == 1)
+        if (timeSeriesLength == 1)
             return;
 
         int count = 0;
@@ -30,17 +30,17 @@ public class StockBuySellOptimized {
 
         // Traverse through given price array
         int i = 0;
-        while (i < n - 1) {
+        while (i < timeSeriesLength - 1) {
             // Find Local Minima. Note that the limit is
             // (n-2) as we are comparing present element to
             // the next element.
-            while ((i < n - 1)
+            while ((i < timeSeriesLength - 1)
                     && (price[i + 1] <= price[i]))
                 i++;
 
             // If we reached the end, break as no further
             // solution possible
-            if (i == n - 1)
+            if (i == timeSeriesLength - 1)
                 break;
 
             Interval e = new Interval();
@@ -49,7 +49,7 @@ public class StockBuySellOptimized {
 
             // Find Local Maxima.  Note that the limit is
             // (n-1) as we are comparing to previous element
-            while ((i < n) && (price[i] >= price[i - 1]))
+            while ((i < timeSeriesLength) && (price[i] >= price[i - 1]))
                 i++;
 
             // Store the index of maxima
@@ -70,7 +70,7 @@ public class StockBuySellOptimized {
                 System.out.println(
                         "Buy on day: " + sol.get(j).buy
                                 + "        "
-                                + "Sell on day : " + sol.get(j).sell);
+                                + "Sell on day : " + sol.get(j).sell + " and the profit amount is - " + (price[sol.get(j).sell] - price[sol.get(j).buy]));
 
     }
 }
