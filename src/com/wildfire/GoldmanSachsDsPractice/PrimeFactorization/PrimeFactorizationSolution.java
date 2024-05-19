@@ -3,7 +3,7 @@ package com.wildfire.GoldmanSachsDsPractice.PrimeFactorization;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Solution {
+public class PrimeFactorizationSolution {
 
     public static void main(String[] args){
         /* System.out.println(primeFactorization(292));

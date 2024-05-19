@@ -2,13 +2,13 @@ package com.wildfire.GoldmanSachsDsPractice.StockBuySell;
 
 public class MaxProfitForStock {
     public static void main(String[] args) {
-        //int price[] = { 100, 180, 260, 310, 40, 535, 695 };
+        int price[] = { 100, 180, 260, 310, 40, 535, 695 };
         //int price[] = { 7,1,5,3,6,4 };
-        int price[] = { 1,4,2 };
+        //int price[] = { 1,4,2 };
         int n = price.length;
 
         // function call
-        int maxProfit = calculateMaxProfit(price);
+        int maxProfit =maxProfit(price); //calculateMaxProfit(price);
         System.out.println("Maximum amount profit is - " + maxProfit);
     }
 
