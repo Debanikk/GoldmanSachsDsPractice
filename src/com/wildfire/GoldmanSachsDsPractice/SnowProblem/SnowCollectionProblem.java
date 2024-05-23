@@ -8,6 +8,29 @@ public class SnowCollectionProblem {
         System.out.println("Snow Collected is : " + getSnow(arr));
     }
 
+    private static Integer computeSnowpack(final Integer[] buildingHeight) {
+        int result = 0;
+
+        int leftMax = 0, rightMax = 0;
+
+        // indices to traverse the array
+        int low = 0, high = buildingHeight.length - 1;
+
+        while (low <= high) {
+            if (buildingHeight[low] < buildingHeight[high]) {
+                if (buildingHeight[low] > leftMax) leftMax = buildingHeight[low];
+                else result += leftMax - buildingHeight[low];
+                low++;
+            } else {
+                if (buildingHeight[high] > rightMax) rightMax = buildingHeight[high];
+                else result += rightMax - buildingHeight[high];
+                high--;
+            }
+        }
+
+        return result;
+    }
+
     static int getSnow(int[] arr) {
         int[] left = new int[arr.length];
         int[] right = new int[arr.length];
