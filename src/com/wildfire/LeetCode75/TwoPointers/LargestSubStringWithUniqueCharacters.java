@@ -1,4 +1,4 @@
-package com.wildfire.GoldmanSachsDsPractice.StringOperations;
+package com.wildfire.LeetCode75.TwoPointers;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

@@ -36,6 +36,7 @@ public class MinCostMatrixProblem {
     public static void main(String[] args) {
         //int[][] cost = {{1, 2, 3}, {4, 8, 2}, {1, 5, 3}};
         int[][] cost = {{1,2,3,1}, {4,8,7,2}, {3,2,1,9}, {4,7,5,2}};
+        System.out.println("!!! Please enter the x and y coordinate as per matrix range 0 -> 3 !!!");
         Scanner scan = new Scanner(System.in);
         int xCoordinate = scan.nextInt();
         int yCoordinate = scan.nextInt();

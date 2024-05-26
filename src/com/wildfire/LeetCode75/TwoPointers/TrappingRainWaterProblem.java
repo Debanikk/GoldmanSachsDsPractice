@@ -3,11 +3,12 @@ package com.wildfire.LeetCode75.TwoPointers;
 public class TrappingRainWaterProblem {
     public static void main(String[] args) {
         int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};
-        int result = trapBruteForceUsingDP(height);
+        //int[] height = {0,1,2,3,4,5,6,7,8,9,10,11,10,11,10,9,8,7,6,5,4,3,2,1,0};
+        //int result = trapBruteForceUsingDP(height);
         int optimumResult = trapWaterTwoPointer(height);
-        System.out.println("Optimum result is - " + optimumResult);
+        System.out.println("Total harvested water in Optimum way is - " + optimumResult + " unit");
 
-        System.out.println("Rain water amount that can be trapped - " + result);
+        //System.out.println("Rain water amount that can be trapped - " + result);
     }
 
     private static int trapBruteForceUsingDP(int[] height) {
@@ -41,6 +42,8 @@ public class TrappingRainWaterProblem {
                 max = i;
             }
         }
+
+        // Find the water that can be stored on the left side of the max column in array
         int sum = 0;
         int leftMax = 0;
         for(int i = 0; i < max; i++) {
@@ -49,6 +52,8 @@ public class TrappingRainWaterProblem {
             }
             sum += Math.min(height[leftMax], height[max]) - height[i];
         }
+
+        // Find the water that can be stored on the left side of the max column in array
         int rightMax = len - 1;
         for(int i = len - 1; i > max; i--) {
             if(height[rightMax] < height[i]) {
@@ -56,6 +61,7 @@ public class TrappingRainWaterProblem {
             }
             sum += Math.min(height[max], height[rightMax]) - height[i];
         }
+        // return total water harvested
         return sum;
     }
 }
