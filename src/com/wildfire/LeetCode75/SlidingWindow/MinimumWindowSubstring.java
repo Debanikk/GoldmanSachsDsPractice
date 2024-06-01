@@ -16,15 +16,21 @@ public class MinimumWindowSubstring {
 
 
     public static String minWindow(String s, String t) {
+        // create an array to hold the character map
         int[] map = new int[128];
         int count = t.length();
         int start = 0, end = 0, minLen = Integer.MAX_VALUE, startIndex = 0;
 
+        // insert and mark teh characters in small string in the map array as 1 and rest will be marked as 0
         for(char c: t.toCharArray())
             map[c]++;
 
         char[] S = s.toCharArray();
 
+        // creation of sliding window - traverse through the array
+        // by using end as the right pointer to get new char to compare
+        // with chars in map array. if found decrease the count in the map
+        // array and total counter as well.
         while(end < S.length){
             if(map[S[end]] > 0)
                 count--;

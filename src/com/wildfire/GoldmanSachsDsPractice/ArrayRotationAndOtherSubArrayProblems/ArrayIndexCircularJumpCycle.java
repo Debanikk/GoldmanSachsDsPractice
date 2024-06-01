@@ -39,7 +39,7 @@ public class ArrayIndexCircularJumpCycle {
     public static void main(String[] args) {
 
         boolean testsPassed = true;
-
+        testsPassed &= countLengthOfCycle(new int[]{1, 2, 3, 1}, 0) == 3;
         testsPassed &= countLengthOfCycle(new int[]{1, 0}, 0) == 2;
         testsPassed &= countLengthOfCycle(new int[]{1, 2, 0}, 0) == 3;
 

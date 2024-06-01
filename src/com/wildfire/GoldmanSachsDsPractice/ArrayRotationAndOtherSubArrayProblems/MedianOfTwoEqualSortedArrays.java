@@ -1,6 +1,6 @@
 package com.wildfire.GoldmanSachsDsPractice.ArrayRotationAndOtherSubArrayProblems;
 
-public class MedianTwoSortedArrays {
+public class MedianOfTwoEqualSortedArrays {
     public static void main(String[] args) {
         if(doTests())
             System.out.println("Median is found");

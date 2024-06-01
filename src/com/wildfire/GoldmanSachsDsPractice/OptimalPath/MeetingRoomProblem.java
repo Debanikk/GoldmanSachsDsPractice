@@ -8,7 +8,7 @@ public class MeetingRoomProblem {
     public static void main(String[] args) {
         int[][] meetings = {{6,8}, {4,6}, {3,5}, {8,9}};
         int roomRequired = minMeetingRooms(meetings);
-        System.out.println("Merting room required is - " + roomRequired);
+        System.out.println("Meeting room required is - " + roomRequired);
     }
 
     private static int minMeetingRooms(int[][] meetings) {
