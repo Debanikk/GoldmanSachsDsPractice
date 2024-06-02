@@ -21,7 +21,7 @@ public class MinimumWindowSubstring {
         int count = t.length();
         int start = 0, end = 0, minLen = Integer.MAX_VALUE, startIndex = 0;
 
-        // insert and mark teh characters in small string in the map array as 1 and rest will be marked as 0
+        // insert and mark the characters in small string in the map array as 1 and rest will be marked as 0
         for(char c: t.toCharArray())
             map[c]++;
 
