@@ -1,5 +1,6 @@
 package com.wildfire.GoldmanSachsDsPractice.IntegerAndArrayNumberProblems;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class CountPairsWithGivenSum {
@@ -53,5 +54,24 @@ public class CountPairsWithGivenSum {
             }
             map.put(arr[i], i);
         }
+    }
+
+    // this will be satisfied if the array is sorted in ascending order
+    static void getPairsTwoPointer(int[] arr, int targetSum) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while(start <= end) {
+            int sum = arr[start] + arr[end];
+            if(sum == targetSum)
+                break;
+            else if (sum > targetSum) {
+                end--;
+            }
+            else {
+                start++;
+            }
+        }
+        System.out.println("Start index is - " + start + " and end index is - " + end);
     }
 }
