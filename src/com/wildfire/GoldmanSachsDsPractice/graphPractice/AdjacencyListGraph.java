@@ -41,7 +41,7 @@ public class AdjacencyListGraph {
     public Set<Integer> DFSIterative(int startVertex) {
         // store the visited vertex
         Set<Integer> visited = new HashSet<>();
-        // storage for the neighboring edges of teh visited nodes
+        // storage for the neighboring edges of the visited nodes
         Stack<Integer> stack = new Stack<>();
 
         // push the start vertex in the stack
