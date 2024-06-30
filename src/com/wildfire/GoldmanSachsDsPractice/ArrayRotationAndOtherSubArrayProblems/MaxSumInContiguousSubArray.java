@@ -8,6 +8,7 @@ public class MaxSumInContiguousSubArray {
         System.out.println("Max sum is: " + res);
     }
 
+    // Kadane's algorithm with optimum solution Time complexity - O(n) and space - O(1)
     private static int getMaxSumInSubArray(int[] arr) {
         int max_so_far = arr[0];
         int curr_max = arr[0];
