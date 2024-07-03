@@ -9,12 +9,13 @@ public class ReversePrintLinkedLIst {
         n1.next.next.next.next = new ListNode(5);
         n1.next.next.next.next.next = new ListNode(6);
         n1.next.next.next.next.next.next = new ListNode(7);
+        n1.next.next.next.next.next.next.next = new ListNode(8);
 
         reversePrintList(n1);
     }
 
     private static void reversePrintList(ListNode head) {
-        if(head.next == null)
+        if(head == null)
             return;
 
         reversePrintList(head.next);
